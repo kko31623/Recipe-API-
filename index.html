@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recipie Finder</title>
+	  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  	  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  	  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+  	  <style type="text/css">
+  	  </style> 
+</head>
+<body>
+	<div class="container">
+		<p>name-contains: <input type="text" id="nameContains"></p>
+		<p>ingredients-any: <input type="text" id="ingredientsAny"></p>
+		<p>ingredients-all <input type="text" id="ingredientsAll"></p>
+		<p>cuisine <input type="text" id="cuisine"></p>
+		<p>method: <input type="text" id="method"></p>
+		<p>offset: <input type="text" id="offset"></p>
+		<p>limit: <input type="text" id="limit"></p>
+		<p><button type="button" onclick="Stuff()" id="submit">find me recicpies</button></p>
+	<div id="output" ></div>
+	<script>
+		$('#form').submit(function(){
+			console.log("Hi");
+		});
+		function Stuff() {	
+			var nameContains = $('#nameContains').val();
+			var ingredientsAny = $('#ingredientsAny').val();
+			var ingredientsAll = $('#ingredientsAll').val();
+			var cuisine = $('#cuisine').val();
+			var method = $('#method').val();
+			var offset = $('#offset').val();
+			var limit = $('#limit').val(); 
+
+			var url = "http://api.pearson.com:80/kitchen-manager/v1/recipes?name-contains=" + nameContains;
+			$.get(url, function(data){
+				console.log(data);
+			});
+
+		}
+	</script>
+	</div>
+</body>
+</html>
