@@ -10,14 +10,19 @@
   	  </style> 
 </head>
 <body>
-	<div class="container">
-		<p>name-contains: <input type="text" id="nameContains"></p>
-		<p>ingredients-any: <input type="text" id="ingredientsAny"></p>
-		<p>ingredients-all <input type="text" id="ingredientsAll"></p>
-		<p>cuisine <input type="text" id="cuisine"></p>
-		<p>method: <input type="text" id="method"></p>
-		<p>offset: <input type="text" id="offset"></p>
-		<p>limit: <input type="text" id="limit"></p>
+<form method="GET" action="http://api.pearson.com:80/kitchen-manager/v1/recipes">
+	<label>name-contains: <input type="text" id="nameContains" name="" /></label>
+
+</form>
+	<!--
+		<div class="container">
+		<p>name-contains: <input type="text" id="nameContains" /></p>
+		<p>ingredients-any: <input type="text" id="ingredientsAny" /></p>
+		<p>ingredients-all <input type="text" id="ingredientsAll" /></p>
+		<p>cuisine <input type="text" id="cuisine" /></p>
+		<p>method: <input type="text" id="method" /></p>
+		<p>offset: <input type="text" id="offset" /></p>
+		<p>limit: <input type="text" id="limit" /></p>
 		<p><button type="button" onclick="Stuff()" id="submit">find me recicpies</button></p>
 	<div id="output" ></div>
 	<script>
@@ -41,5 +46,6 @@
 		}
 	</script>
 	</div>
+	-->
 </body>
 </html>
